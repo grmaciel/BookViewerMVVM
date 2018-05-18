@@ -5,8 +5,8 @@ import android.arch.persistence.room.Relation
 
 class SectionsAndBooks {
     @Embedded
-    var section: SectionRoom? = null
+    lateinit var section: SectionRoom
 
     @Relation(parentColumn = "name", entityColumn = "sectionName", entity = BookRoom::class)
-    var books: List<BookRoom>? = null
+    lateinit var books: List<BookRoom>
 }
